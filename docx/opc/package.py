@@ -8,7 +8,10 @@ from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.opc.packuri import PACKAGE_URI, PackURI
 from docx.opc.part import PartFactory
 from docx.opc.parts.coreprops import CorePropertiesPart
+<<<<<<< HEAD
 from docx.opc.parts.customprops import CustomPropertiesPart
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 from docx.opc.pkgreader import PackageReader
 from docx.opc.pkgwriter import PackageWriter
 from docx.opc.rel import Relationships
@@ -42,6 +45,7 @@ class OpcPackage(object):
         """
         return self._core_properties_part.core_properties
 
+<<<<<<< HEAD
     @property
     def custom_properties(self):
         """
@@ -51,6 +55,8 @@ class OpcPackage(object):
         return self._custom_properties_part.custom_properties
 
 
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     def iter_rels(self):
         """
         Generate exactly one reference to each relationship in the package by
@@ -194,6 +200,7 @@ class OpcPackage(object):
             self.relate_to(core_properties_part, RT.CORE_PROPERTIES)
             return core_properties_part
 
+<<<<<<< HEAD
     @property
         def _custom_properties_part(self):
             """
@@ -206,6 +213,8 @@ class OpcPackage(object):
                 custom_properties_part = CustomPropertiesPart.default(self)
                 self.relate_to(custom_properties_part, RT.CUSTOM_PROPERTIES)
                 return custom_properties_part
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 class Unmarshaller(object):
     """Hosts static methods for unmarshalling a package from a |PackageReader|."""

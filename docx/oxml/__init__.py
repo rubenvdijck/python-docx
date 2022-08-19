@@ -39,6 +39,7 @@ def register_element_cls(tag, cls):
     namespace = element_class_lookup.get_namespace(nsmap[nspfx])
     namespace[tagroot] = cls
 
+<<<<<<< HEAD
 def register_element_cls_ns(tag, ns, cls):
     """
     Register *cls* to be constructed when the oxml parser encounters an
@@ -47,6 +48,8 @@ def register_element_cls_ns(tag, ns, cls):
     """
     namespace = element_class_lookup.get_namespace(ns)
     namespace[tag] = cls
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 def OxmlElement(nsptag_str, attrs=None, nsdecls=None):
     """
@@ -80,9 +83,12 @@ register_element_cls("w:titlePg", CT_OnOff)
 from .coreprops import CT_CoreProperties  # noqa
 register_element_cls('cp:coreProperties', CT_CoreProperties)
 
+<<<<<<< HEAD
 from .customprops import CT_CustomProperties  # noqa
 register_element_cls_ns('Properties', 'http://schemas.openxmlformats.org/officeDocument/2006/custom-properties', CT_CustomProperties)
 
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 from .document import CT_Body, CT_Document  # noqa
 register_element_cls('w:body',     CT_Body)
 register_element_cls('w:document', CT_Document)
@@ -133,8 +139,11 @@ from .shape import (  # noqa
 )
 register_element_cls('a:blip',        CT_Blip)
 register_element_cls('a:ext',         CT_PositiveSize2D)
+<<<<<<< HEAD
 register_element_cls('a:extLst',      CT_Transform2D)
 register_element_cls('asvg:svgBlip',  CT_Transform2D)
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 register_element_cls('a:graphic',     CT_GraphicalObject)
 register_element_cls('a:graphicData', CT_GraphicalObjectData)
 register_element_cls('a:off',         CT_Point2D)
@@ -235,11 +244,14 @@ register_element_cls('w:webHidden',  CT_OnOff)
 from .text.paragraph import CT_P  # noqa
 register_element_cls('w:p', CT_P)
 
+<<<<<<< HEAD
 from .text.inserted import CT_Ins
 register_element_cls('w:ins', CT_Ins)
 register_element_cls('w:author', CT_String)
 register_element_cls('w:date', CT_String)
 
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 from .text.parfmt import (  # noqa
     CT_Ind,
     CT_Jc,

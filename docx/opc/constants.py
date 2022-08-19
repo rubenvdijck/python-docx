@@ -77,9 +77,12 @@ class CONTENT_TYPE(object):
     OPC_CORE_PROPERTIES = (
         'application/vnd.openxmlformats-package.core-properties+xml'
     )
+<<<<<<< HEAD
     OPC_CUSTOM_PROPERTIES = (
         'application/vnd.openxmlformats-officedocument.custom-properties+xml'
     )
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     OPC_DIGITAL_SIGNATURE_CERTIFICATE = (
         'application/vnd.openxmlformats-package.digital-signature-certificat'
         'e'

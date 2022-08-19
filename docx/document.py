@@ -102,6 +102,7 @@ class Document(ElementProxy):
         return self._part.core_properties
 
     @property
+<<<<<<< HEAD
     def custom_properties(self):
         """
         A |CustomProperties| object providing read/write access to the custom
@@ -111,6 +112,8 @@ class Document(ElementProxy):
 
 
     @property
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     def inline_shapes(self):
         """
         An |InlineShapes| object providing access to the inline shapes in

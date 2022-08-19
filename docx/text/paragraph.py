@@ -11,7 +11,10 @@ from __future__ import (
 from ..enum.style import WD_STYLE_TYPE
 from .parfmt import ParagraphFormat
 from .run import Run
+<<<<<<< HEAD
 from .inserted import Inserted
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 from ..shared import Parented
 
 
@@ -40,6 +43,7 @@ class Paragraph(Parented):
             run.style = style
         return run
 
+<<<<<<< HEAD
     def add_inserted(self, author="Unknown", date="2022-08-15T16:49:00Z"):
         """
         Append a run to this paragraph containing *text* and having character
@@ -53,6 +57,8 @@ class Paragraph(Parented):
         inserted = Inserted(ins, self)
         return inserted
 
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     @property
     def alignment(self):
         """

@@ -45,6 +45,7 @@ class DocumentPart(BaseStoryPart):
         return self.package.core_properties
 
     @property
+<<<<<<< HEAD
     def custom_properties(self):
         """
         A |CustomProperties| object providing read/write access to the custom
@@ -53,6 +54,8 @@ class DocumentPart(BaseStoryPart):
         return self.package.custom_properties
 
     @property
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     def document(self):
         """
         A |Document| object providing access to the content of this document.

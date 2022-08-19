@@ -19,13 +19,19 @@ nsmap = {
     "pic": "http://schemas.openxmlformats.org/drawingml/2006/picture",
     "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
     "sl": "http://schemas.openxmlformats.org/schemaLibrary/2006/main",
+<<<<<<< HEAD
     'vt': "http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes",
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
     'w14': "http://schemas.microsoft.com/office/word/2010/wordml",
     "wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
     "xml": "http://www.w3.org/XML/1998/namespace",
     "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+<<<<<<< HEAD
     "asvg": "http://schemas.microsoft.com/office/drawing/2016/SVG/main",
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 }
 
 pfxmap = dict((value, key) for key, value in nsmap.items())

@@ -102,7 +102,10 @@ class MIME_TYPE(object):
     JPEG = 'image/jpeg'
     PNG = 'image/png'
     TIFF = 'image/tiff'
+<<<<<<< HEAD
     SVG = 'image/svg+xml'
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 
 class PNG_CHUNK_TYPE(object):

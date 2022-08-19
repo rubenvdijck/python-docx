@@ -23,7 +23,10 @@ class CT_Blip(BaseOxmlElement):
     """
     embed = OptionalAttribute('r:embed', ST_RelationshipId)
     link = OptionalAttribute('r:link', ST_RelationshipId)
+<<<<<<< HEAD
     extLst = ZeroOrOne('a:extLst')
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 
 class CT_BlipFillProperties(BaseOxmlElement):
@@ -99,7 +102,11 @@ class CT_Inline(BaseOxmlElement):
             '  <a:graphic>\n'
             '    <a:graphicData uri="URI not set"/>\n'
             '  </a:graphic>\n'
+<<<<<<< HEAD
             '</wp:inline>' % nsdecls('wp', 'a', 'pic', 'r', 'asvg')
+=======
+            '</wp:inline>' % nsdecls('wp', 'a', 'pic', 'r')
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
         )
 
 
@@ -134,6 +141,7 @@ class CT_Picture(BaseOxmlElement):
         contents required to define a viable picture element, based on the
         values passed as parameters.
         """
+<<<<<<< HEAD
         if filename.endswith(".svg"):
             pic = parse_xml(cls._pic_xml_svg())
             pic.blipFill.blip.extLst.ext.svgBlip.embed = rId
@@ -143,11 +151,18 @@ class CT_Picture(BaseOxmlElement):
 
         pic.nvPicPr.cNvPr.id = pic_id
         pic.nvPicPr.cNvPr.name = filename
+=======
+        pic = parse_xml(cls._pic_xml())
+        pic.nvPicPr.cNvPr.id = pic_id
+        pic.nvPicPr.cNvPr.name = filename
+        pic.blipFill.blip.embed = rId
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
         pic.spPr.cx = cx
         pic.spPr.cy = cy
         return pic
 
     @classmethod
+<<<<<<< HEAD
     def _pic_xml_svg(cls):
         return (
             '<pic:pic %s>\n'
@@ -178,6 +193,8 @@ class CT_Picture(BaseOxmlElement):
         )
 
     @classmethod
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
     def _pic_xml(cls):
         return (
             '<pic:pic %s>\n'
@@ -198,7 +215,11 @@ class CT_Picture(BaseOxmlElement):
             '    </a:xfrm>\n'
             '    <a:prstGeom prst="rect"/>\n'
             '  </pic:spPr>\n'
+<<<<<<< HEAD
             '</pic:pic>' % nsdecls('pic', 'a', 'r', 'asvg')
+=======
+            '</pic:pic>' % nsdecls('pic', 'a', 'r')
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
         )
 
 
@@ -225,7 +246,10 @@ class CT_PositiveSize2D(BaseOxmlElement):
     """
     cx = RequiredAttribute('cx', ST_PositiveCoordinate)
     cy = RequiredAttribute('cy', ST_PositiveCoordinate)
+<<<<<<< HEAD
     svgBlip = ZeroOrOne('asvg:svgBlip')
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
 
 class CT_PresetGeometry2D(BaseOxmlElement):
@@ -295,7 +319,10 @@ class CT_Transform2D(BaseOxmlElement):
     """
     off = ZeroOrOne('a:off', successors=('a:ext',))
     ext = ZeroOrOne('a:ext', successors=())
+<<<<<<< HEAD
     embed = OptionalAttribute('r:embed', ST_RelationshipId)
+=======
+>>>>>>> 36cac78de080d412e9e50d56c2784e33655cad59
 
     @property
     def cx(self):
