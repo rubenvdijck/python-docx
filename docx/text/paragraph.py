@@ -40,7 +40,7 @@ class Paragraph(Parented):
             run.style = style
         return run
 
-    def add_inserted(self, author=None, date=None):
+    def add_inserted(self, author="Unknown", date="2022-08-15T16:49:00Z"):
         """
         Append a run to this paragraph containing *text* and having character
         style identified by style ID *style*. *text* can contain tab
@@ -51,10 +51,6 @@ class Paragraph(Parented):
         """
         ins = self._p.add_ins()
         inserted = Inserted(ins, self)
-        if author:
-            inserted.author = author
-        if date:
-            inserted.date = date
         return inserted
 
     @property

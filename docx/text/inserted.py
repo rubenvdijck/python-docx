@@ -79,3 +79,31 @@ class Inserted(Parented):
     def text(self, text):
         self.clear()
         self.add_run(text)
+
+    @property
+    def author(self):
+        """
+        A member of :ref:`WdTabLeader` specifying a repeating character used
+        as a "leader", filling in the space spanned by this tab. Assigning
+        |None| produces the same result as assigning `WD_TAB_LEADER.SPACES`.
+        Read/write.
+        """
+        return self._ins.author
+
+    @author.setter
+    def author(self, value):
+        self._ins.author = value
+
+    @property
+    def date(self):
+        """
+        A member of :ref:`WdTabLeader` specifying a repeating character used
+        as a "leader", filling in the space spanned by this tab. Assigning
+        |None| produces the same result as assigning `WD_TAB_LEADER.SPACES`.
+        Read/write.
+        """
+        return self._ins.date
+
+    @date.setter
+    def date(self, value):
+        self._ins.date = value
